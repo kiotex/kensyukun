@@ -1,0 +1,21 @@
+{
+    "name": "検収くん",
+    "version": "1.0",
+    "description": "検収DX化用ブラウザ拡張アプリ",
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+    "browser_action": {
+      "default_title": "GAPI Tutorial"
+    },
+    "background": {
+      "page": "background.html",
+      "persistent": false
+    },
+    "oauth2": {
+      "client_id": "{GCPでOAuthを作成したときに発行されるID}",
+      "scopes": ["https://www.googleapis.com/auth/spreadsheets"]
+    },
+    "permissions": [
+      "identity"
+    ]
+  }
